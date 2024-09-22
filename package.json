@@ -1,5 +1,5 @@
 {
-	"name": "ai2saas",
+	"name": "Magent",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
@@ -18,7 +18,7 @@
 		"@radix-ui/react-switch": "^1.0.3",
 		"@radix-ui/react-tabs": "^1.0.4",
 		"@stripe/stripe-js": "^2.1.6",
-		"@supabase/auth-helpers-nextjs": "^0.8.1",
+		"@supabase/auth-helpers-nextjs": "^0.8.7",
 		"@supabase/auth-helpers-react": "^0.4.2",
 		"@supabase/auth-ui-react": "^0.4.5",
 		"@types/node": "20.6.3",
