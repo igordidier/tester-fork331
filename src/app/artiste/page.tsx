@@ -205,7 +205,7 @@ export default function ArtistPage() {
                   ) : (
                     artists.map((artist) => (
                       <li key={artist.id}>
-                        <Link href={`/artiste/${artist.id}`} className="text-blue-600 hover:underline">
+            <Link href={`/artiste/${artist.id}`} className="text-blue-600 hover:underline">
 
                         <div className="px-6 py-4 flex items-center">
                           <div className="flex-shrink-0 h-12 w-12">
