@@ -5,6 +5,8 @@ import { useParams } from 'next/navigation';
 import { Tab } from '@headlessui/react';
 import { CalendarIcon, DocumentTextIcon, CurrencyDollarIcon, MapIcon, UserGroupIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 import VerticalMenu from '../../../components/VerticalMenu';
+import BookingsTab from '../../../components/artistetab/BookingsTab';
+
 
 
 interface Artist {
@@ -57,12 +59,11 @@ export default function ArtistPage() {
         <p className="mt-1 text-gray-500">{artist?.bio || "No bio available."}</p>
       </div>
     )},
-    { name: 'Bookings', icon: CalendarIcon, content: () => (
-      <div>
-        <h2 className="text-lg font-medium text-gray-900">Bookings</h2>
-        <p className="mt-1 text-gray-500">Booking information will be displayed here.</p>
-      </div>
-    )},
+    { 
+      name: 'Bookings', 
+      icon: CalendarIcon, 
+      content: () => <BookingsTab artistId={id as string} />
+    },
     { name: 'Contracts', icon: DocumentTextIcon, content: () => (
       <div>
         <h2 className="text-lg font-medium text-gray-900">Contracts</h2>
@@ -92,7 +93,7 @@ export default function ArtistPage() {
   if (loading) {
     return (
       <div className="flex h-screen bg-gray-50">
-      <VerticalMenu />
+      
       <div className="flex-1 flex flex-col overflow-hidden">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
@@ -133,6 +134,7 @@ export default function ArtistPage() {
 
   return (
     <div className="min-h-screen bg-gray-100">
+      <VerticalMenu />
       <main className="py-10">
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="bg-white overflow-hidden shadow-xl sm:rounded-lg">
